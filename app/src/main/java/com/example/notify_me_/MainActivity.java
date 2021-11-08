@@ -57,29 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
         // Add onClick handlers to all the buttons.
         button_notify = findViewById(R.id.notify);
-        button_notify.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Send the notification
-                sendNotification();
-            }
-        });
-
         button_update = (Button) findViewById(R.id.update);
+        button_cancel = (Button) findViewById(R.id.cancel);
         button_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // Update the notification.
                 updateNotification();
-            }
-        });
-
-        button_cancel = (Button) findViewById(R.id.cancel);
-        button_cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Cancel the notification.
-                cancelNotification();
             }
         });
 
@@ -131,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
      * OnClick method for the "Notify Me!" button.
      * Creates and delivers a simple notification.
      */
-    public void sendNotification() {
+    public void sendNotification(View view) {
 
         // Sets up the pending intent to update the notification.
         // Corresponds to a press of the Update Me! button.
@@ -211,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * OnClick method for the "Cancel Me!" button. Cancels the notification.
      */
-    public void cancelNotification() {
+    public void cancelNotification(View view) {
         // Cancel the notification.
         mNotifyManager.cancel(NOTIFICATION_ID);
 
