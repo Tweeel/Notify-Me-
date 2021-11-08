@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Constants for the notification actions buttons.
     private static final String ACTION_UPDATE_NOTIFICATION =
-            "com.android.example.notifyme.ACTION_UPDATE_NOTIFICATION";
+            "com.example.notify_me_.ACTION_UPDATE_NOTIFICATION";
     // Notification channel ID.
     private static final String PRIMARY_CHANNEL_ID =
             "primary_notification_channel";
